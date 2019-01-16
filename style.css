@@ -1,0 +1,618 @@
+@font-face{
+	font-family: 'Museo Sans Cyrl';
+    src: url('fonts/Museosanscyrl500.ttf')
+    src: url('fonts/Museosanscyrl500.woff')
+    src: url('fonts/Museosanscyrl500.woff2')
+    font-weight: 500;
+    font-style: normal;
+}
+body, h1,h2,h3,p,ul,li,div{
+	margin: 0;
+	padding: 0;
+	font-family: 'Museo Sans Cyrl';
+	font-size: 30px;
+}
+li{
+	list-style: none;
+}
+a,button{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.menu-container, .logo, .menu, .call{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.fix-block{
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+}
+.logo{
+	width: 11.4%;
+}
+.menu:before{
+	content: '';
+	display: block;
+	width: 4px;
+	height: 37px;
+	background-color: #fff;
+	position: absolute;
+	left: -26px;
+}
+.logo a{
+	color: #fff;
+	font-size: 18px;
+}
+.menu{
+	width: 35%;
+	margin-right: 9%;
+	position: relative;
+}
+.menu a{
+	font-size: 16px;
+	color: #fff;
+}
+.call{
+	width: 20%;
+}
+.call a{
+	font-size: 12px;
+	color: #fff;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+}
+.call li{
+	display: flex;
+	align-items: center;
+}
+.call a:first-child:before{
+	content: '';
+	display: block;
+	width: 23px;
+	height: 23px;
+	background-image: url(img/email.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	float: left;
+	margin-right: 7px;
+	background-repeat: no-repeat;
+}
+.call a:last-child:before{
+	content: '';
+	display: block;
+	width: 23px;
+	height: 23px;
+	background-image: url(img/phone.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	float: left;
+	background-repeat: no-repeat;
+	margin-right: 7px;
+}
+.menu-container{
+	justify-content: space-between;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-top: 23px;	
+}
+.menu-container button{
+	width: 166px;
+	height: 35px;
+	background-color: #ff0000;
+	color: #fff;
+	text-align: center;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.drop{
+	width: 40px;
+	height: 40px;
+	margin: auto;
+	cursor: pointer;
+	display: none;
+}
+.top-line, .bot-line{
+	display: block;
+	width: 2px;
+	height: 38px;
+	background-color: #fff;
+	transform: rotate(90deg);
+	position: absolute;
+	transition: 0.4s;
+}
+.top-line{
+left: 0;
+right: 0;
+margin: auto;
+top: 50px;
+}
+.bot-line{
+left: 0;
+right: 0;
+margin: auto;
+}
+
+.move-top{
+	top: 60px;
+	transform: rotate(45deg);
+}
+.move-bot{
+	transform: rotate(137deg);
+}
+.slider-item img{
+	width: 100%;
+}
+.myDots{
+	display: flex;
+	position: relative;
+	top: -70px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 75px;
+	justify-content: space-between;
+}
+.myDots button{
+	border-radius: 100%;
+	width: 14px;
+	height: 14px;
+	background-color: transparent;
+	text-indent: -9999px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	color: #fff;
+	outline: none;
+	border: 1px solid #fff;
+}
+.myDots li.slick-active button{
+  background-color: #fff;
+}
+.fix{
+	background: rgba(0,0,0,0.7);
+	padding-bottom: 20px;
+	transition: 0.7s;
+}
+.display-title{
+	margin-bottom: 46px;
+	padding-top: 46px;
+}
+.display-title h2{
+	font-size: 48px;
+	font-weight: bolder;
+	text-align: center;
+	color: #000;
+}
+.about{
+	background-color: #fff;
+}
+.display-title p{
+	font-size: 18px;
+	font-weight: 300;
+	text-align: center;
+	color: #000;
+}
+.about-container{
+	display: flex;
+	justify-content: space-around;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 50px 0;
+}
+.about-item{
+	border-radius: 10px;
+	width: 30%;
+	height: 403px;
+	position: relative;
+}
+.about-item:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 10px;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.about-txt{
+	position: relative;
+	z-index: 2;
+}
+.about-item:first-child{
+	background-image: url(img/about-img-1.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.about-item:nth-child(2){
+	background-image: url(img/about-img-2.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.about-item:last-child{
+	background-image: url(img/about-img-3.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.about-item h3{
+	font-size: 5.5vw;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 85px;
+
+}
+.about-item p{
+	font-size: 1.315vw;
+	text-align: center;
+	margin: 45px 0;
+	color : #fff; 
+}
+.about-item button{
+	border-radius: 25px;
+	border: 1px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	height: 53px;
+	width: 46%;
+	margin: 25px auto;
+	display: block;
+	transition: 0.7s;
+}
+.about-item button:hover{
+  	background-color: rgb(255, 0, 0);
+}
+.line{
+	background-color: #fff;
+	height: 4px;
+	width: 80%;
+	margin: auto;
+}
+
+.works{
+	background-color: #0e0b12;
+	padding-bottom: 10px;
+}
+.works h2{
+	color: #fff;
+}
+.works p{
+	color: #fff;
+}
+.tatto-gallery{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 95%;
+	margin: auto;
+}
+.tatto-gallery a{
+	width: 400px;
+	height: 400px;
+	margin-top: 50px;
+}
+.tatto-gallery img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.gallery-btn{
+  border-radius: 20px;
+  background-color: rgb(255, 0, 0);
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  transition: 0.6s;
+  margin: 40px auto;
+  display: block;
+  transition: 0.6s;
+}
+.gallery-btn:after{
+	width: 44px;
+	height: 44px;
+	content: '';
+	background-image: url(img/next.png);
+	-webkit-background-size: auto;
+	background-size: auto;
+	position: absolute;
+	background-repeat: no-repeat;
+	display: block;
+	border-radius: 100%;
+	background-color: #fff;
+	top: 12%;
+	right: 11px;
+	background-position: 18px;
+	transition: 0.7s;
+}
+.gallery-btn:hover:after{
+	background-color: rgb(255, 0, 0);
+}
+.gallery-btn:hover{
+	background-color: #0e0b12;
+	border: 1px solid red;
+	border-radius: 20px;
+}
+.steps-container{
+	padding: 0 90px;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 46px;
+	padding-bottom: 50px;
+}
+.steps-item{
+	width: 30%;
+}
+.number{
+	font-size: 48px;
+	width: 123px;
+	height: 123px;
+	background-color: #0e0b12;
+	text-align: center;
+	line-height: 123px;
+	color: #fff;
+	border-radius: 100%;
+}
+.steps-txt h3{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 43px 0;
+}
+.steps-txt p{
+	font-size: 18px;
+}
+.contacts{
+	box-sizing: border-box;
+	padding-left: 160px;
+	padding-right: 94px;
+	height: 205px;
+	background-color: #fff;
+	background-color: #0e0b12;
+}
+.contacts-form{
+	height: 100%;
+
+}
+.contacts-form form{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-top: 35px;
+}
+.contacts-form span{
+	display: block;
+	color: #fff;
+	margin-left: 8px;
+	margin-bottom: 	18px;
+}
+.contacts-form label{
+	width: 28%;
+}
+.contacts-form input{
+   width: 100%;
+   height: 50px;
+   box-sizing: border-box;
+   padding-left: 15px;
+   font-size: 18px;
+   color: #0e0b12;
+   border-radius: 10px;
+   background-color: rgb(247, 247, 247);
+   border: none;
+}
+.contacts-form button{
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  width: 166px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  margin-top: 33px;
+}
+.contacts-form p{
+	font-size: 16px;
+	color: #fff;
+	margin-top: 50px;
+}
+.comand-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0px 50px;
+	padding-bottom: 50px;
+}
+.comand-item{
+	width: 33%;
+}
+.comand-item:nth-child(2){
+	margin: 0 25px;
+}
+.comand-item img{
+	width: 100%;
+	border-radius: 10px;
+}
+.comand-txt h3{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 48px 0;
+
+}
+.comand-txt p{
+	font-size: 18px;
+}
+footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 90px;
+	background-color: #0e0b12;
+	padding: 0px 30px;
+	color: #fff;
+}
+footer  p{
+	font-size: 18px;
+}
+footer a{
+	color : #fff;
+	font-size: 35px;
+	margin: 0px 10px;
+	display: block;
+}
+footer a:hover{
+	color: #ff0000;
+}
+.social{
+	display: flex;
+}
+
+@media screen and (max-width: 1070px){
+	.menu-container a{
+		font-size: 0.8rem;
+	}
+	.menu{
+		margin: 0;
+	}
+	.call{
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 930px){
+	.menu-container{
+		flex-direction: column;
+	}
+	.menu{
+		width: 95%;
+	}
+	.call{
+    	width: 60%;
+    	margin-top: 30px;
+	}
+	.logo{
+    	width: 20%;
+	}
+	.menu-container button{
+		display: none;
+	}
+	.fix-block{
+		background: rgba(0,0,0,0.7);
+	}
+	.menu:before{
+		content: '';
+		display: none;
+	}
+}
+@media screen and (max-width: 762px){
+	.steps-container{
+		flex-direction: column;
+	}
+	.display-title {
+    	margin-bottom: 16px;
+    	padding-top: 16px;
+	}
+	.steps-item{
+		width: 100%;
+		margin: 30px 0;
+	}
+	.steps-txt h3{
+		font-size: 3.932vw;
+	}
+	.steps-txt p{
+		font-size: 2.449vw;
+	}
+	.tatto-gallery{
+		max-width: 730px;
+		flex-wrap: wrap;
+	}
+	.tatto-gallery a{
+		width: 48%;
+		height: 100%;
+	}
+	.contacts{
+		height: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.contacts-form form{
+		flex-direction: column;
+	}
+	.contacts-form label{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 590px){
+	.menu , .call{
+		transform: translateY(-100%);
+		visibility: collapse;
+	}
+	.show{
+		transform: translateY(0%);
+		visibility: visible;
+		transition: 0.7s;
+	}
+	.drop{
+		display: block;
+	}
+	.comand-container{
+		flex-direction: column;
+	}
+	.comand-item{
+		width: 100%;
+	}
+	.comand-txt h3{
+		margin: 20px 0;
+	}
+	.about-container{
+		flex-direction: column;
+	}
+	.about-item{
+		width: 100%;
+		margin: 15px 0;
+		height: 340px;
+	}
+	.about-item h3{
+		font-size: 8.5vw;
+	}
+	.about-item p {
+    	font-size: 3.315vw;
+	}
+	footer{
+		flex-direction: column;
+	}
+	footer p{
+		margin: 15px 0;
+		font-size: 4.5vw;
+	}
+	footer h2{
+		font-size: 5.208vw;
+	}
+}
+@media screen and (max-width: 480px){
+	.menu {
+		flex-direction: column;
+	}
+	.call{
+		width: 100%;
+	}
+}
